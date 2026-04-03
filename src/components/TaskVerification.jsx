@@ -13,7 +13,7 @@ export default function TaskVerification({ onComplete, disabled }) {
     if (disabled || tasks[taskId].status !== 'idle') return
 
     // Open twitter link in new tab (mock)
-    window.open(`https://twitter.com/intent/${taskId === 'follow' ? 'follow?screen_name=web3' : 'retweet?tweet_id=123'}`, '_blank')
+    window.open(`https://twitter.com/intent/${taskId === 'follow' ? 'follow?screen_name=TimothyOla58058' : 'retweet?tweet_id=123'}`, '_blank')
     
     // Simulate verification delay
     setTasks(prev => ({ ...prev, [taskId]: { status: 'verifying' } }))
@@ -37,7 +37,7 @@ export default function TaskVerification({ onComplete, disabled }) {
       <div className="task-item">
         <div className="task-info">
           <Twitter className="task-icon" size={24} />
-          <span className="task-name">Follow @Web3Devs</span>
+          <span className="task-name">Follow @TimothyOla58058</span>
         </div>
         
         {tasks.follow.status === 'completed' ? (
